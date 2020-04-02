@@ -1,0 +1,19 @@
+*{
+    font-family: 'Candara', sans-serif;
+
+}
+.footer{
+    background-image: linear-gradient(to bottom, #984063 10%,  #CD295A 60%);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    font-size: 15px;
+    clear: both;
+
+
+}
+b{
+    color: white;
+}

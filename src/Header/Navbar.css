@@ -1,0 +1,25 @@
+*{
+    font-family: 'Candara', sans-serif;
+
+}
+
+.pink{
+    background-image: linear-gradient(to top, #984063 20%,  #CD295A 100%);
+    font-size: 22px;
+    display: flex; justify-content: center;
+}
+.white-text{
+    text-decoration: none;
+    color: white;
+}
+Link{
+    font-family: 'Candara', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+Link:hover,
+b:hover,
+.white-text:hover{
+    text-decoration: none;
+    color: pink;
+}

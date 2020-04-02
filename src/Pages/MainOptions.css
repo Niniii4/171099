@@ -1,0 +1,65 @@
+*{
+    font-family: 'Candara', sans-serif;
+}
+body{
+    min-height: 200%;
+}
+.main{
+    overflow: auto;
+}
+.card {
+    display:inline-block;
+    width: 350px;
+}
+.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    color: pink;
+}
+[role="button"][aria-pressed="true"] {
+    color: white;
+    background-image: linear-gradient(to bottom, #38ADAE 20%, #CD295A 100%);
+    border-color: hotpink;
+    font-size: 37px;
+    width: 220px;
+    height: 130px;
+    text-align: center;
+}
+form, .form{
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    font-size: 19px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+
+[role="button"][aria-pressed="true"]:hover,
+[role="button"][aria-pressed="true"]:active{
+    color: pink;
+    background-position: left;
+    border-color: pink;
+    width: 240px;
+    height: 150px;
+}
+.MainOptions{
+    margin-top: 100px;
+    display: flex; justify-content: center;
+}
+.btn-info:active{
+    background-color: #CD295A;
+}
+.badge{
+    font-size: 20px;
+    background-color: white;
+    color: #CD295A;
+}
+.badge:hover, .badge:active{
+    font-size: 35px;
+    background-color: #182a3f;
+    color: #CD295A;
+}
+h1{
+    color: #182a3f;
+}
