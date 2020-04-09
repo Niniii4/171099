@@ -24,11 +24,15 @@ public class Orders {
     private Long numOrders;
 
     @ManyToOne
-    private Flowers flowersOrdered;
+    private Gifts orderGifts;
 
-    @ManyToOne
-    private Wrappings wrappingsOrdered;
-
-    @ManyToOne
-    private Ornaments ornamentsOrdered;
+    public Orders(String name, String surname, String email, String address, Long phone, Long numOrders, Gifts orderGifts) {
+        this.name=name;
+        this.surname=surname;
+        this.email=email;
+        this.address=address;
+        this.phone=phone;
+        this.numOrders=numOrders;
+        this.orderGifts=orderGifts;
+    }
 }

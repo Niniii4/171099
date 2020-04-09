@@ -1,10 +1,12 @@
 package mk.finki.ukim.mk.shiftgift.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true, value = {"detailWrappings", "detailFlowers" })
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -14,9 +16,6 @@ import java.util.List;
 @Table (name = "DETAILS")
 public class Details {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     private String name;
     private String size;
     private String color;
@@ -26,8 +25,7 @@ public class Details {
 
     @ManyToMany private List<Wrappings> detailWrappings;
 
-    public Details(Long id, String name, String size, String color, Integer quantity) {
-        this.id = id;
+    public Details(String name, String size, String color, Integer quantity) {
         this.name = name;
         this.size = size;
         this.color = color;

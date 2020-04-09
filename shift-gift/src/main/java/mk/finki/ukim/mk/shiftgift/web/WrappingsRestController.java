@@ -22,45 +22,51 @@ public class WrappingsRestController {
         this.wrappingsService = wrappingsService;
     }
 
-    @GetMapping("/{id}")
-    public Long findWrappingsById(@PathVariable Long id){
-        return this.wrappingsService.findWrappingsById(id);
+    @GetMapping
+    public List<Wrappings> getAllWrappings() {
+        return this.wrappingsService.findAllWrappings();
     }
+
+    @GetMapping("/{id}")
+    public Long getById(@PathVariable Long id){
+        return this.wrappingsService.getById(id);
+    }
+
     @GetMapping(params = "shape")
     public List<Wrappings> findAllByShape(@RequestParam String shape){
         return this.wrappingsService.findAllByShape(shape);
     }
 
-    @PatchMapping("/{id}")
+    @PatchMapping("/update/{id}")
     public void updateWrapping(@PathVariable Long id,
                         @RequestParam(value = "title") String title,
-                        @RequestParam(value = "description", required = false) String description,
-                        @RequestParam(value = "handmade", required = false) Boolean handmade,
-                        @RequestParam(value = "color", required = false) String color,
-                        @RequestParam(value = "size", required = false) String size,
+                        @RequestParam(value = "description") String description,
+                        @RequestParam(value = "color") String color,
+                        @RequestParam(value = "size") String size,
                         @RequestParam (value = "fabric") String fabric,
                         @RequestParam (value = "shape") String shape){
-        this.wrappingsService.updateWrapping(id, title, description, handmade, color, size, fabric, shape);
+        this.wrappingsService.updateWrapping(id, title, description, color, size, fabric, shape);
     }
 
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
-    public Wrappings createWrapping(@RequestHeader Long id,  @RequestParam (value = "title") String title,
+    public Wrappings createWrapping(
+                                    @RequestParam (value = "title") String title,
                              @RequestParam (value = "description") String description,
-                             @RequestParam (value = "handmade", required = false) Boolean handmade,
-                             @RequestParam (value = "color", required = false) String color,
-                             @RequestParam (value = "size", required = false) String size,
+                             @RequestParam (value = "handmade") Boolean handmade,
+                             @RequestParam (value = "color") String color,
+                             @RequestParam (value = "size") String size,
                              @RequestParam (value = "fabric") String fabric,
                              @RequestParam (value = "shape") String shape,
-                             @RequestParam (value = "wrappingDetails", required = false) List<Details> wrappingDetails,
+                             @RequestParam (value = "wrappingDetails", required = false) String wrappingDetails,
                              HttpServletResponse response,
                              UriComponentsBuilder builder){
-        Wrappings wrap = wrappingsService.createWrapping(id, title, description, handmade, color, size, fabric, shape, wrappingDetails);
+        Wrappings wrap = wrappingsService.createWrapping(title, description, handmade, color, size, fabric, shape, wrappingDetails);
         response.setHeader("Ornaments", builder.path("/wrappings/create/{id}").buildAndExpand(wrap.getId()).toUriString());
         return wrap;
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public void deleteWrapping(@PathVariable Long id){
         this.wrappingsService.deleteWrapping(id);
     }

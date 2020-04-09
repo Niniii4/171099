@@ -6,6 +6,7 @@ import mk.finki.ukim.mk.shiftgift.repository.JpaWrappingsRepository;
 import mk.finki.ukim.mk.shiftgift.service.WrappingsService;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -17,8 +18,13 @@ public class WrappingsServiceImpl implements WrappingsService {
     }
 
     @Override
-    public Long findWrappingsById(Long id) {
-        return this.jpaWrappingsRepository.findWrappingsById(id);
+    public List<Wrappings> findAllWrappings() {
+        return this.jpaWrappingsRepository.findAll();
+    }
+
+    @Override
+    public Long getById(Long id) {
+        return this.jpaWrappingsRepository.getById(id);
     }
 
     @Override
@@ -27,13 +33,20 @@ public class WrappingsServiceImpl implements WrappingsService {
     }
 
     @Override
-    public void updateWrapping(Long id, String title, String description, Boolean handmade, String color, String size, String shape, String fabric) {
-        this.jpaWrappingsRepository.updateWrapping(id, title, description, handmade, color, size, shape, fabric);
+    public void updateWrapping(Long id, String title, String description, String color, String size, String fabric, String shape) {
+        this.jpaWrappingsRepository.updateWrapping(id, title, description, color, size, fabric, shape);
     }
 
     @Override
-    public Wrappings createWrapping(Long id, String title, String description, Boolean handmade, String color, String size, String fabric, String shape, List<Details> wrappingDetails) {
-        Wrappings w = new Wrappings(id, title, description, handmade, color, size, fabric, shape, wrappingDetails);
+    public Wrappings createWrapping(String title, String description, Boolean handmade, String color, String size, String fabric, String shape, String wrappingDetails) {
+        List<Details> details = new ArrayList<>();
+        String[] convert = wrappingDetails.split("\\s*,\\s*");
+        for (String n : convert){
+            Details d = new Details();
+            d.setName(n);
+            details.add(d);
+        }
+        Wrappings w = new Wrappings(title, description, handmade, color, size, fabric, shape, details);
         return this.jpaWrappingsRepository.save(w);
     }
 

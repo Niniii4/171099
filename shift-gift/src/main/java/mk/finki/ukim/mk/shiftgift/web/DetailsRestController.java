@@ -19,42 +19,42 @@ public class DetailsRestController {
         this.detailsService = detailsService;
     }
 
+    @GetMapping("/{name}")
+    public List<Details> findByName(@PathVariable String name){
+        return this.detailsService.findByName(name);
+    }
+
     @GetMapping(params = "name")
     public List<Details> findAllByName(@RequestParam String name){
         return this.detailsService.findAllByName(name);
     }
 
-    @GetMapping("/{id}")
-    public Long findDetailsById(@PathVariable Long id){
-        return this.detailsService.findDetailsById(id);
-    }
-
-    @PatchMapping("/{id}")
-    public void updateDetail(@PathVariable Long id,
-                             @RequestParam(value = "name", required = false) String name,
+    @PatchMapping("/{name}")
+    public void updateDetail(
+                             @PathVariable(value = "name", required = false) String name,
                              @RequestParam(value = "size", required = false) String size,
                              @RequestParam(value = "color", required = false) String color,
                              @RequestParam(value = "quantity", required = false) Integer quantity){
-        this.detailsService.updateDetail(id, name, size, color, quantity);
+        this.detailsService.updateDetail(name, size, color, quantity);
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Details createDetail(@RequestHeader Long id,
+    public Details createDetail(
                          @RequestParam(value = "name") String name,
                          @RequestParam(value = "size") String size,
                          @RequestParam(value = "color") String color,
                          @RequestParam(value = "quantity") Integer quantity,
                          HttpServletResponse response,
                          UriComponentsBuilder builder) {
-        Details detail = detailsService.createDetail(id, name, size, color, quantity);
-        response.setHeader("Detail", builder.path("/details/create/{id}").buildAndExpand(detail.getId()).toUriString());
+        Details detail = detailsService.createDetail(name, size, color, quantity);
+        response.setHeader("Detail", builder.path("/details/create/{name}").buildAndExpand(detail.getName()).toUriString());
         return detail;
     }
 
 
-    @DeleteMapping("/{id}")
-    public void deleteDetail(@PathVariable Long id){
-        this.detailsService.deleteDetail(id);
+    @DeleteMapping("/{name}")
+    public void deleteDetail(@PathVariable String name){
+        this.detailsService.deleteByName(name);
     }
 }

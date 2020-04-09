@@ -17,14 +17,7 @@ public class Ornaments extends Gifts{
     private String breakable;
     private String material;
 
-    @ManyToOne
-    private Wrappings ornamentWrap;
-
-    @OneToMany(mappedBy = "ornamentsOrdered", cascade = {CascadeType.ALL})
-    private Set<Orders> ornamentsOrdered = new HashSet<>();
-
-    public Ornaments(Long id, String title, String description, Boolean handmade, String color, String size, String breakable, String material, Wrappings ornamentWrap) {
-        this.id = id;
+    public Ornaments(String title, String description, Boolean handmade, String color, String size, String breakable, String material) {
         this.title = title;
         this.description = description;
         this.handmade = handmade;
@@ -32,6 +25,5 @@ public class Ornaments extends Gifts{
         this.size = size;
         this.breakable = breakable;
         this.material = material;
-        this.ornamentWrap = ornamentWrap;
     }
 }

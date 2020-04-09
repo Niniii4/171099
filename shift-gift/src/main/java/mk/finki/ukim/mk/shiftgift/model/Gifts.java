@@ -23,4 +23,6 @@ public class Gifts {
     public String color;
     public String size;
 
+    @OneToMany(mappedBy = "orderGifts", fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+    private Set<Orders> giftsOrdered = new HashSet<>();
 }

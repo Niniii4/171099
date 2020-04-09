@@ -1,9 +1,6 @@
 package mk.finki.ukim.mk.shiftgift.web;
 
-import mk.finki.ukim.mk.shiftgift.model.Flowers;
-import mk.finki.ukim.mk.shiftgift.model.Orders;
-import mk.finki.ukim.mk.shiftgift.model.Ornaments;
-import mk.finki.ukim.mk.shiftgift.model.Wrappings;
+import mk.finki.ukim.mk.shiftgift.model.*;
 import mk.finki.ukim.mk.shiftgift.service.OrdersService;
 import org.springframework.http.HttpStatus;
 import org.springframework.util.MimeTypeUtils;
@@ -23,6 +20,12 @@ public class OrdersRestController {
         this.ordersService = ordersService;
     }
 
+    @GetMapping
+    public List<Orders> getAllOrders() {
+        return this.ordersService.findAllOrders();
+    }
+
+
     @GetMapping("/{id}")
     public Long findOrdersById(@PathVariable Long id){
         return ordersService.findOrdersById(id);
@@ -33,27 +36,30 @@ public class OrdersRestController {
         return ordersService.findByNameOrSurname(name, surname);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public void deleteOrder(@PathVariable Long id){
         ordersService.deleteOrder(id);
     }
 
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
-    public Orders createOrder(@RequestHeader Long id,
-                              @RequestParam (value = "name") String name,
-                              @RequestParam (value = "surname") String surname,
+    public Orders createOrder(
+                              @RequestParam (value = "name", required = false) String name,
+                              @RequestParam (value = "surname", required = false) String surname,
                               @RequestParam (value = "email", required = false) String email,
-                              @RequestParam (value = "address") String address,
-                              @RequestParam (value = "phone") Long phone,
+                              @RequestParam (value = "address", required = false) String address,
+                              @RequestParam (value = "phone", required = false) Long phone,
                               @RequestParam (value = "numOrders", required = false) Long numOrders,
-                              @RequestParam (value = "flowersOrdered", required = false) Flowers flowersOrdered,
-                              @RequestParam (value = "wrappingsOrdered", required = false) Wrappings wrappingsOrdered,
-                              @RequestParam (value = "ornamentsOrdered", required = false) Ornaments ornamentsOrdered,
+                              @RequestParam (value = "orderGifts", required = false) Gifts orderGifts,
                               HttpServletResponse response,
                               UriComponentsBuilder builder){
-        Orders order = ordersService.createOrder(id, name, surname, email, address, phone, numOrders, flowersOrdered, wrappingsOrdered, ornamentsOrdered);
+        Orders order = ordersService.createOrder(name, surname, email, address, phone, numOrders, orderGifts);
         response.setHeader("Orders", builder.path("/orders/create/{id}").buildAndExpand(order.getId()).toUriString());
         return order;
     }
+
+//    @PatchMapping("/addGift/{orderGifts}")
+//    public void addGift(@PathVariable Gifts orderGifts){
+//        this.ordersService.addGift(orderGifts);
+//    }
 }

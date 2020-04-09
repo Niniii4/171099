@@ -21,9 +21,14 @@ public class FlowersRestController {
         this.flowersService = flowersService;
     }
 
+    @GetMapping
+    public List<Flowers> getAllFlowers() {
+        return this.flowersService.findAllFlowers();
+    }
+
     @GetMapping("/{id}")
-    public Long findFlowersById(@PathVariable Long id){
-        return this.flowersService.findFlowersById(id);
+    public Long getById(@PathVariable Long id){
+        return this.flowersService.getById(id);
     }
 
     @GetMapping(params = "family, type")
@@ -33,36 +38,33 @@ public class FlowersRestController {
     @PatchMapping("/update/{id}")
     public void updateFlower(@PathVariable Long id,
                              @RequestParam (value = "title") String title,
-                             @RequestParam (value = "description", required = false) String description,
-                             @RequestParam (value = "handmade", required = false) Boolean handmade,
-                             @RequestParam (value = "color", required = false) String color,
-                             @RequestParam (value = "size", required = false) String size,
-                             @RequestParam (value = "family", required = false) String family,
-                             @RequestParam (value = "type") String type,
-                             @RequestParam (value = "flowerWrap", required = false) Wrappings flowerWrap){
-        this.flowersService.updateFlower(id, title, description, handmade, color, size, family, type, flowerWrap);
+                             @RequestParam (value = "description") String description,
+                             @RequestParam (value = "color") String color,
+                             @RequestParam (value = "size") String size,
+                             @RequestParam (value = "family") String family,
+                             @RequestParam (value = "type") String type){
+        this.flowersService.updateFlower(id, title, description, color, size, family, type);
     }
 
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
-    public Flowers createFlower(@RequestHeader Long id,
+    public Flowers createFlower(
                          @RequestParam (value = "title") String title,
                          @RequestParam (value = "description") String description,
-                         @RequestParam (value = "handmade", required = false) Boolean handmade,
-                         @RequestParam (value = "color", required = false) String color,
-                         @RequestParam (value = "size", required = false) String size,
-                         @RequestParam (value = "family", required = false) String family,
+                         @RequestParam (value = "handmade") Boolean handmade,
+                         @RequestParam (value = "color") String color,
+                         @RequestParam (value = "size") String size,
+                         @RequestParam (value = "family") String family,
                          @RequestParam (value = "type") String type,
-                         @RequestParam (value = "flowerWrap", required = false) Wrappings flowerWrap,
-                         @RequestParam (value = "flowerDetails", required = false) List<Details> flowerDetails,
+                         @RequestParam (value = "flowerDetails", required = false) String flowerDetails,
                          HttpServletResponse response,
                          UriComponentsBuilder builder){
-        Flowers flower = flowersService.createFlower(id, title, description, handmade, color, size, family, type, flowerWrap, flowerDetails);
+        Flowers flower = flowersService.createFlower(title, description, handmade, color, size, family, type, flowerDetails);
         response.setHeader("Flowers", builder.path("/flowers/create/{id}").buildAndExpand(flower.getId()).toUriString());
         return flower;
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public void deleteFlower(@PathVariable Long id){
         flowersService.deleteFlower(id);
     }

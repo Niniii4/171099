@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import './MainOptions.css';
-import {Link, Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Loading2 from "../Loading/Loading2";
 import Loading3 from "../Loading/Loading3";
 import Loading from "../Loading/Loading";
@@ -15,26 +15,29 @@ class MainOptions extends Component {
                             <div>Flowers</div>
                         </button>
                     </Link>
-                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     <Link className="nav-link" to={"/wrappings"}>
                         <button type="button" role="button" className="btn btn-lg fa fa-gift" aria-pressed="true">
                             <div>Wrappings</div>
                         </button>
                     </Link>
+                    &nbsp;
                     <Loading/>
-                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp;
                     <Link className="nav-link" to={"/ornaments"}>
                         <button type="button" role="button" className="btn btn-lg fa fa-diamond" aria-pressed="true">
                             <div>Ornaments</div>
                         </button>
                     </Link>
-                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     <Link className="nav-link" to={"/decorations"}>
                         <button type="button" role="button" className="btn btn-lg fa fa-asl-interpreting" aria-pressed="true">
                             <div>Decorations</div>
                         </button>
                     </Link>
                     <Loading2/>
+
+
                 </div>
 
         );

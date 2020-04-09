@@ -1465,7 +1465,7 @@
 }
 body {
 
-    background-image: linear-gradient(to bottom, #3c4d60 20%, blueviolet 100%);
+    background-image: linear-gradient(to bottom, dimgrey 20%, indigo 100%);
 }
 
 body * {

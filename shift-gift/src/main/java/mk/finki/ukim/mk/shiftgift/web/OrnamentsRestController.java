@@ -20,41 +20,43 @@ public class OrnamentsRestController {
         this.ornamentsService = ornamentsService;
     }
 
+    @GetMapping
+    public List<Ornaments> getAllOrnaments() {
+        return this.ornamentsService.findAllOrnaments();
+    }
+
     @GetMapping("/{id}")
     public Long findOrnamentsById(@PathVariable Long id) {
         return this.ornamentsService.findOrnamentsById(id);
     }
 
-    @PatchMapping("/{id}")
+    @PatchMapping("/update/{id}")
     public void updateOrnament(@PathVariable Long id,
                         @RequestParam(value = "title") String title,
-                        @RequestParam(value = "description", required = false) String description,
-                        @RequestParam(value = "handmade", required = false) Boolean handmade,
-                        @RequestParam(value = "color", required = false) String color,
-                        @RequestParam(value = "size", required = false) String size,
+                        @RequestParam(value = "description") String description,
+                        @RequestParam(value = "color") String color,
+                        @RequestParam(value = "size") String size,
                         @RequestParam(value = "breakable") String breakable,
-                        @RequestParam(value = "material") String material,
-                        @RequestParam(value = "ornamentWrap", required = false) Wrappings ornamentWrap) {
-        this.ornamentsService.updateOrnament(id, title, description, handmade, color, size, breakable, material, ornamentWrap);
+                        @RequestParam(value = "material") String material){
+           this.ornamentsService.updateOrnament(id, title, description, color, size, breakable, material);
     }
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
-    public Ornaments createOrnament(@RequestHeader Long id,  @RequestParam (value = "title") String title,
+    public Ornaments createOrnament(@RequestParam (value = "title") String title,
                                     @RequestParam (value = "description") String description,
-                                    @RequestParam (value = "handmade", required = false) Boolean handmade,
-                                    @RequestParam (value = "color", required = false) String color,
-                                    @RequestParam (value = "size", required = false) String size,
+                                    @RequestParam (value = "handmade") Boolean handmade,
+                                    @RequestParam (value = "color") String color,
+                                    @RequestParam (value = "size") String size,
                                     @RequestParam (value = "breakable", required = false) String breakable,
                                     @RequestParam (value = "material") String material,
-                                    @RequestParam (value = "ornamentWrap", required = false) Wrappings ornamentWrap,
                                     HttpServletResponse response,
                                     UriComponentsBuilder builder){
-        Ornaments ornament = ornamentsService.createOrnament(id, title, description, handmade, color, size, breakable, material, ornamentWrap);
+        Ornaments ornament = ornamentsService.createOrnament(title, description, handmade, color, size, breakable, material);
         response.setHeader("Ornaments", builder.path("/ornaments/create/{id}").buildAndExpand(ornament.getId()).toUriString());
         return ornament;
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public void deleteOrnament(@PathVariable Long id){
         this.ornamentsService.deleteOrnament(id);
     }

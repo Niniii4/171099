@@ -1,7 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6992ff17-06e0-4f0e-a14f-56b48aaa7b52" name="Default Changelist" comment="" />
+    <list default="true" id="6992ff17-06e0-4f0e-a14f-56b48aaa7b52" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/(" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/({" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Header/About.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Header/Contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Header/images/img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Header/images/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Header/images/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Header/images/img4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Header/images/map1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Header/images/map2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Header/images/pin1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Header/images/pin2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Loading/AboutMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Loading/Diamond.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Loading/GiftBox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Loading/Pinky.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Loading/aboutMenu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Loading/diamond.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Loading/giftBox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Loading/pinky.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Flowers/CreateFlower.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Flowers/DeleteFlower.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Flowers/UpdateFlower.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Orders/CreateOrder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Ornaments/AllOrnaments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Ornaments/CreateOrnament.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Ornaments/DeleteOrnament.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Ornaments/Ornaments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Ornaments/UpdateOrnament.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Wrappings/AllWrappings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Wrappings/CreateWrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Wrappings/DeleteWrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Wrappings/UpdateWrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/model/Details.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/model/Details.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/model/Flowers.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/model/Flowers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/model/Gifts.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/model/Gifts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/model/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/model/Orders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/model/Ornaments.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/model/Ornaments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/model/Wrappings.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/model/Wrappings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/repository/JpaDetailsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/repository/JpaDetailsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/repository/JpaFlowersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/repository/JpaFlowersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/repository/JpaOrdersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/repository/JpaOrdersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/repository/JpaOrnamentsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/repository/JpaOrnamentsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/repository/JpaWrappingsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/repository/JpaWrappingsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/DetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/DetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/FlowersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/FlowersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/GiftsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/GiftsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/OrdersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/OrdersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/OrnamentsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/OrnamentsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/WrappingsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/WrappingsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/impl/DetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/impl/DetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/impl/FlowersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/impl/FlowersServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/impl/GiftsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/impl/GiftsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/impl/OrdersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/impl/OrdersServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/impl/OrnamentsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/impl/OrnamentsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/impl/WrappingsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/service/impl/WrappingsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/web/DetailsRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/web/DetailsRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/web/FlowersRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/web/FlowersRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/web/OrdersRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/web/OrdersRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/web/OrnamentsRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/web/OrnamentsRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/web/WrappingsRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shift-gift/src/main/java/mk/finki/ukim/mk/shiftgift/web/WrappingsRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Axios/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Axios/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Footer/Informations.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Footer/Informations.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Footer/Informations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Footer/Informations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Header/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Loading/loading.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loading/loading.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Create.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Decorations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Decorations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Flowers/AddFlower.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Flowers/AllFlowers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Flowers/AllFlowers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Flowers/FlowerService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Flowers/Flowers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Flowers/Flowers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/MainOptions.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainOptions/MainOptions.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/MainOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainOptions/MainOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Ornaments.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Wrappings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Wrappings/Wrappings.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +117,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Xvrmyu58INoJznV0OmKg9qsjBf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -49,11 +141,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ninan\shift-a-gift\src\Loading" />
-      <recent name="C:\Users\ninan\shift-a-gift\src\Pages\Flowers" />
-      <recent name="C:\Users\ninan\shift-a-gift\src\Background" />
-      <recent name="C:\Users\ninan\shift-a-gift\src" />
-      <recent name="C:\Users\ninan\shift-a-gift\src\Pages" />
+      <recent name="C:\Users\ninan\shift-gift-git\shift-a-gift\src" />
+      <recent name="C:\Users\ninan\shift-gift-git\shift-a-gift\src\Pages\MainOptions" />
+      <recent name="C:\Users\ninan\shift-gift-git\shift-a-gift\node_modules" />
+      <recent name="C:\Users\ninan\shift-gift-git\shift-a-gift\src\Pages\Ornaments" />
+      <recent name="C:\Users\ninan\shift-gift-git\shift-a-gift\src\Pages\Wrappings" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -96,21 +188,36 @@
       <workItem from="1584463444775" duration="10334000" />
       <workItem from="1585790325907" duration="496000" />
       <workItem from="1585790982612" duration="10290000" />
+      <workItem from="1585863994892" duration="8124000" />
+      <workItem from="1585924086712" duration="18617000" />
+      <workItem from="1586012096603" duration="16085000" />
+      <workItem from="1586092496285" duration="19192000" />
+      <workItem from="1586184455933" duration="10362000" />
+      <workItem from="1586205685451" duration="8812000" />
+      <workItem from="1586216603711" duration="4071000" />
+      <workItem from="1586285537008" duration="19065000" />
+      <workItem from="1586376386379" duration="24873000" />
+      <workItem from="1586447744906" duration="5863000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/Pages/Create.js</url>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

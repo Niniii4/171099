@@ -17,6 +17,11 @@ public class OrnamentsServiceImpl implements OrnamentsService {
     }
 
     @Override
+    public List<Ornaments> findAllOrnaments() {
+        return this.jpaOrnamentsRepository.findAll();
+    }
+
+    @Override
     public List<Ornaments> getAllByTitle(String title) {
         return this.jpaOrnamentsRepository.getAllByTitle(title);
     }
@@ -27,13 +32,13 @@ public class OrnamentsServiceImpl implements OrnamentsService {
     }
 
     @Override
-    public void updateOrnament(Long id, String title, String description, Boolean handmade, String color, String size, String breakable, String material, Wrappings ornamentWrap) {
-        this.jpaOrnamentsRepository.updateOrnament(id, title, description, handmade, color, size, breakable, material, ornamentWrap.id);
+    public void updateOrnament(Long id, String title, String description, String color, String size, String breakable, String material) {
+        this.jpaOrnamentsRepository.updateOrnament(id, title, description, color, size, breakable, material);
     }
 
     @Override
-    public Ornaments createOrnament(Long id, String title, String description, Boolean handmade, String color, String size, String breakable, String material, Wrappings ornamentWrap) {
-        Ornaments o = new Ornaments(id, title, description, handmade, color, size, breakable, material, ornamentWrap);
+    public Ornaments createOrnament(String title, String description, Boolean handmade, String color, String size, String breakable, String material) {
+        Ornaments o = new Ornaments(title, description, handmade, color, size, breakable, material);
         return this.jpaOrnamentsRepository.save(o);
     }
 

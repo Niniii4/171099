@@ -7,8 +7,9 @@ import mk.finki.ukim.mk.shiftgift.repository.JpaFlowersRepository;
 import mk.finki.ukim.mk.shiftgift.service.FlowersService;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
-import java.util.List;
+import javax.transaction.Transactional;
+import java.util.*;
+import java.lang.*;
 
 @Service
 public class FlowersServiceImpl implements FlowersService {
@@ -19,13 +20,13 @@ public class FlowersServiceImpl implements FlowersService {
     }
 
     @Override
-    public List<Flowers> getAllFlowers(Long id) {
+    public List<Flowers> findAllFlowers() {
         return this.jpaFlowersRepository.findAll();
     }
 
     @Override
-    public Long findFlowersById(Long id) {
-        return this.jpaFlowersRepository.findFlowersById(id);
+    public Long getById(Long id) {
+        return this.jpaFlowersRepository.getById(id);
     }
 
     @Override
@@ -34,13 +35,20 @@ public class FlowersServiceImpl implements FlowersService {
     }
 
     @Override
-    public void updateFlower(Long id, String title, String description, Boolean handmade, String color, String size, String family, String type, Wrappings flowerWrap) {
-       this.jpaFlowersRepository.updateFlower(id, title, description, handmade, color, size, family, type, flowerWrap.getId());
+    public void updateFlower(Long id, String title, String description, String color, String size, String family, String type) {
+       this.jpaFlowersRepository.updateFlower(id, title, description, color, size, family, type);
     }
 
     @Override
-    public Flowers createFlower(Long id, String title, String description, Boolean handmade, String color, String size, String family, String type, Wrappings flowerWrap, List<Details> flowerDetails) {
-        Flowers f = new Flowers(id, title, description, handmade, color, size, family, type, flowerWrap, flowerDetails);
+    public Flowers createFlower(String title, String description, Boolean handmade, String color, String size, String family, String type,  String flowerDetails) {
+        List<Details> details = new ArrayList<>();
+        String[] convert = flowerDetails.split("\\s*,\\s*");
+        for (String n : convert){
+            Details d = new Details();
+            d.setName(n);
+            details.add(d);
+        }
+        Flowers f = new Flowers(title, description, handmade, color, size, family, type, details);
         return this.jpaFlowersRepository.save(f);
     }
 

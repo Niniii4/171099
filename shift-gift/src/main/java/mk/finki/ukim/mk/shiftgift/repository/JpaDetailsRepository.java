@@ -8,12 +8,15 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface JpaDetailsRepository extends JpaRepository<Details, Long> {
-    @Query("SELECT d FROM Details d WHERE d.id = :id")
-    Long findDetailsById(@Param("id") Long id);
+    @Query("DELETE FROM Details d WHERE d.name = :name")
+    void deleteByName(@Param("name") String name);
+
+    @Query("SELECT d FROM Details d WHERE d.name = :name")
+    List<Details> findByName(@Param("name") String name);
 
     @Query("SELECT d FROM Details d WHERE d.name = :name")
     List<Details> findAllByName(@Param("name") String name);
 
-    @Query("UPDATE Details d SET d.name=:name, d.color=:color, d.size=:size, d.quantity=:quantity WHERE d.id=:id")
-    void updateDetail(@Param("id") Long id, @Param("name") String name, @Param("color") String color, @Param("size") String size, @Param("quantity") Integer quantity);
+    @Query("UPDATE Details d SET d.color=:color, d.size=:size, d.quantity=:quantity WHERE d.name=:name")
+    void updateDetail(@Param("name") String name, @Param("color") String color, @Param("size") String size, @Param("quantity") Integer quantity);
 }

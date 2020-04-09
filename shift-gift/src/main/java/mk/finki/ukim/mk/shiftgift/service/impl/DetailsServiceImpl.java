@@ -16,8 +16,8 @@ public class DetailsServiceImpl implements DetailsService {
     }
 
     @Override
-    public Long findDetailsById(Long id) {
-        return this.jpaDetailsRepository.findDetailsById(id);
+    public List<Details> findByName(String name) {
+        return this.jpaDetailsRepository.findByName(name);
     }
 
     @Override
@@ -26,18 +26,18 @@ public class DetailsServiceImpl implements DetailsService {
     }
 
     @Override
-    public void updateDetail(Long id, String name, String color, String size, Integer quantity) {
-        this.jpaDetailsRepository.updateDetail(id, name, color, size, quantity);
+    public void updateDetail(String name, String color, String size, Integer quantity) {
+        this.jpaDetailsRepository.updateDetail(name, color, size, quantity);
     }
 
     @Override
-    public Details createDetail(Long id, String name, String size, String color, Integer quantity) {
-        Details d = new Details(id, name, size, color, quantity);
+    public Details createDetail(String name, String size, String color, Integer quantity) {
+        Details d = new Details(name, size, color, quantity);
         return this.jpaDetailsRepository.save(d);
     }
 
     @Override
-    public void deleteDetail(Long id) {
-        this.jpaDetailsRepository.deleteById(id);
+    public void deleteByName(String name) {
+        this.jpaDetailsRepository.deleteByName(name);
     }
 }

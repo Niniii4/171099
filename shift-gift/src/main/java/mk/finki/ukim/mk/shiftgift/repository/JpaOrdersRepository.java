@@ -1,10 +1,13 @@
 package mk.finki.ukim.mk.shiftgift.repository;
 
+import mk.finki.ukim.mk.shiftgift.model.Gifts;
 import mk.finki.ukim.mk.shiftgift.model.Orders;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 public interface JpaOrdersRepository extends JpaRepository<Orders, Long> {

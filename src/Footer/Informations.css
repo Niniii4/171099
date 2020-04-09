@@ -9,11 +9,29 @@
     bottom: 0;
     height: 70px;
     width: 100%;
-    font-size: 15px;
+    font-size: 25px;
     clear: both;
-
-
 }
-b{
+.footer-info{
     color: white;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.f-item:hover, .f-item2:hover{
+    color: pink;
+}
+.footer-el{
+    display: flex;
+    justify-content: center;
+}
+.f-item{
+    color: white;
+    font-size: 40px;
+}
+.f-item2{
+    color: white;
+    font-size: 20px;
 }

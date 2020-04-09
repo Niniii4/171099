@@ -9,17 +9,32 @@ body{
 }
 .card {
     display:inline-block;
-    width: 350px;
+    width: 330px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.card-footer-center{
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+}
+.text-muted{
+    color: darkslategrey;
+    font-size:18px;
+    font-weight: bolder;
 }
 .nav-link{
     color: white;
+}
+h3{
+    font-weight: bolder;
 }
 .nav-link:hover{
     color: pink;
 }
 [role="button"][aria-pressed="true"] {
     color: white;
-    background-image: linear-gradient(to bottom, #38ADAE 20%, #CD295A 100%);
+    background-image: linear-gradient(to bottom, rebeccapurple 20%, #CD295A 100%);
     border-color: hotpink;
     font-size: 37px;
     width: 220px;
@@ -29,11 +44,11 @@ body{
 form, .form{
     background-color: rgba(255,255,255,0.2);
     border-radius: 10px;
-    font-size: 19px;
+    font-size: 20px;
     padding-top: 10px;
     padding-bottom: 50px;
+    font-weight: bold;
 }
-
 
 [role="button"][aria-pressed="true"]:hover,
 [role="button"][aria-pressed="true"]:active{

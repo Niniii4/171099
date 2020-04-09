@@ -1,9 +1,6 @@
 package mk.finki.ukim.mk.shiftgift.service.impl;
 
-import mk.finki.ukim.mk.shiftgift.model.Flowers;
-import mk.finki.ukim.mk.shiftgift.model.Orders;
-import mk.finki.ukim.mk.shiftgift.model.Ornaments;
-import mk.finki.ukim.mk.shiftgift.model.Wrappings;
+import mk.finki.ukim.mk.shiftgift.model.*;
 import mk.finki.ukim.mk.shiftgift.repository.JpaOrdersRepository;
 import mk.finki.ukim.mk.shiftgift.service.OrdersService;
 import org.springframework.stereotype.Service;
@@ -16,6 +13,11 @@ public class OrdersServiceImpl implements OrdersService{
 
     public OrdersServiceImpl(JpaOrdersRepository jpaOrdersRepository) {
         this.jpaOrdersRepository = jpaOrdersRepository;
+    }
+
+    @Override
+    public List<Orders> findAllOrders() {
+        return this.jpaOrdersRepository.findAll();
     }
 
     @Override
@@ -34,8 +36,9 @@ public class OrdersServiceImpl implements OrdersService{
     }
 
     @Override
-    public Orders createOrder(Long id, String name, String surname, String email, String address, Long phone, Long numOrders, Flowers flowersOrdered, Wrappings wrappingsOrdered, Ornaments ornamentsOrdered) {
-        Orders o = new Orders(id, name, surname, email, address, phone, numOrders, flowersOrdered, wrappingsOrdered, ornamentsOrdered);
+    public Orders createOrder(String name, String surname, String email, String address, Long phone, Long numOrders, Gifts orderGifts) {
+        Orders o = new Orders(name, surname, email, address, phone, numOrders, orderGifts);
         return this.jpaOrdersRepository.save(o);
     }
+
 }
