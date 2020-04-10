@@ -6,6 +6,6 @@ import java.util.List;
 import java.util.Set;
 
 public interface GiftsService {
-    List<Gifts> getAllGifts(Long id);
+    Gifts findGiftsById(Long id);
     List<Gifts> findAllByTitle(String title);
 }

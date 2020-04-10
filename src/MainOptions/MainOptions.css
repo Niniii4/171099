@@ -7,11 +7,18 @@ body{
 .main{
     overflow: auto;
 }
+.card>.card-h{
+    background-image: linear-gradient(to left,  #984063 10%, #CD295A 80%);
+}
 .card {
     display:inline-block;
     width: 330px;
     font-weight: bolder;
     font-size: 20px;
+    color: mediumvioletred;
+}
+.card>.card-h>h3{
+    text-transform: uppercase;
 }
 .card-footer-center{
     display: flex;
@@ -25,6 +32,39 @@ body{
 }
 .nav-link{
     color: white;
+}
+table{
+    position: relative;
+    margin: 10px auto;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+div>tr>td, div>tr>Link>td>span{
+    position: relative;
+    margin: 10px auto;
+    padding: 0;
+    width: 25%;
+    height: auto;
+    border-collapse: collapse;
+    text-align: center;
+    color: white;
+    font-size:25px;
+    font-weight: bolder;
+}
+div>div>table>thead>th>td{
+    position: relative;
+    margin: 10px auto;
+    padding: 0;
+    width: 25%;
+    height: auto;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 30px;
+    color: palevioletred;
+
 }
 h3{
     font-weight: bolder;

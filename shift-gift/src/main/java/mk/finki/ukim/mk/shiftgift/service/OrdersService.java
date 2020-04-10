@@ -9,6 +9,6 @@ public interface OrdersService {
     Long findOrdersById(Long id);
     List<Orders> findByNameOrSurname(String name, String surname);
     void deleteOrder(Long id);
-    Orders createOrder(String name, String surname, String email, String address, Long phone, Long numOrders, Gifts orderGifts);
+    Orders createOrder(String name, String surname, String email, String address, Long phone, Long numOrders, Long orderGifts);
 
 }

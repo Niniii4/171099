@@ -18,8 +18,8 @@ public class GiftsRestController {
     }
 
     @GetMapping
-    public List<Gifts> getAllGifts(Long id){
-        return giftsService.getAllGifts(id);
+    public Gifts findGiftsById(Long id){
+        return giftsService.findGiftsById(id);
     }
 
     @GetMapping(params = "title")

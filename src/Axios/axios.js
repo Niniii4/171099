@@ -10,7 +10,6 @@ const GiftsService = {
     },
     createFlower: (newFlower) => {
         const formParams = qs.stringify(newFlower);
-        console.log(formParams);
         return axios.post("http://localhost:8080/flowers/create", formParams, {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -28,7 +27,6 @@ const GiftsService = {
     },
     deleteFlower: (id) => {
         let urlString="http://localhost:8080/flowers/delete/" + id;
-        console.log(urlString);
         return axios.delete(urlString, {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -42,7 +40,6 @@ const GiftsService = {
     },
     createWrapping: (newWrap) => {
         const formParams = qs.stringify(newWrap);
-        console.log(formParams);
         return axios.post("http://localhost:8080/wrappings/create", formParams, {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -60,7 +57,6 @@ const GiftsService = {
     },
     deleteWrapping: (id) => {
         let urlString="http://localhost:8080/wrappings/delete/" + id;
-        console.log(urlString);
         return axios.delete(urlString, {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -74,7 +70,6 @@ const GiftsService = {
     },
     createOrnament: (newOrnament) => {
         const formParams = qs.stringify(newOrnament);
-        console.log(formParams);
         return axios.post("http://localhost:8080/ornaments/create", formParams, {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -92,7 +87,6 @@ const GiftsService = {
     },
     deleteOrnament: (id) => {
         let urlString="http://localhost:8080/ornaments/delete/" + id;
-        console.log(urlString);
         return axios.delete(urlString, {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -106,6 +100,21 @@ const GiftsService = {
                 'Content-Type': 'application/x-www-form-urlencoded',
             }
         })
-    }
+    },
+    loadDecorations: () => {
+        return axios.get('http://localhost:8080/details', {
+            headers: {'Content-Type':'application/json',
+                'Access-Control-Allow-Origin': '*'}
+        })
+    },
+    updateDecoration: (decor, name) => {
+        let urlString = "http://localhost:8080/details/update/" + name;
+        const formParams = qs.stringify(decor);
+        return axios.patch(urlString, formParams, {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            }
+        })
+    },
 }
 export default GiftsService;

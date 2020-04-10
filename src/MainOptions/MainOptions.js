@@ -30,9 +30,9 @@ class MainOptions extends Component {
                         </button>
                     </Link>
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    <Link className="nav-link" to={"/decorations"}>
+                    <Link className="nav-link" to={"/details"}>
                         <button type="button" role="button" className="btn btn-lg fa fa-asl-interpreting" aria-pressed="true">
-                            <div>Decorations</div>
+                            <div>Details</div>
                         </button>
                     </Link>
                     <Loading2/>

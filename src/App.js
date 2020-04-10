@@ -8,7 +8,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "./Header/Navbar";
 import {BrowserRouter as Router, Redirect, Route} from 'react-router-dom';
 import AllFlowers from "./Pages/Flowers/AllFlowers";
-import Decorations from "./Pages/Decorations";
+import Decorations from "./Pages/Decorations/Decorations";
 import CreateFlower from "./Pages/Flowers/CreateFlower";
 import Contact from "./Header/Contact";
 import GiftsService from "./Axios/axios";
@@ -24,6 +24,8 @@ import UpdateOrnament from "./Pages/Ornaments/UpdateOrnament";
 import DeleteOrnament from "./Pages/Ornaments/DeleteOrnament";
 import CreateOrder from "./Pages/Orders/CreateOrder";
 import About from "./Header/About";
+import AllDecorations from "./Pages/Decorations/AllDecorations";
+import UpdateDecoration from "./Pages/Decorations/UpdateDecoration";
 
 class App extends Component {
 
@@ -33,7 +35,7 @@ class App extends Component {
             flowers: [],
             wrappings: [],
             ornaments: [],
-            details: []
+            decorations: []
         }
     }
     loadFlowers = () => {
@@ -90,6 +92,17 @@ class App extends Component {
     createOrder = (order) => {
         GiftsService.createOrder(order);
     };
+    loadDecorations= () => {
+        GiftsService.loadDecorations().then((res) => {
+            console.log(res);
+            this.setState({
+               decorations: res.data
+            });
+        })
+    };
+    updateDecoration = (decor, name) => {
+        GiftsService.updateDecoration(decor, name);
+    };
     render() {
         const routing = (
             <div>
@@ -113,7 +126,8 @@ class App extends Component {
                     <Route path='/ornaments/update/:id' render={(props) => <UpdateOrnament {...props} onOrnamentUpdate={this.updateOrnament}/>}/>
                     <Route path='/ornaments/delete/:id' render={(props) => <DeleteOrnament {...props} onOrnamentDelete={this.deleteOrnament}/>}/>
                     <Route path="/orders/create" exact render={(props) =>  <CreateOrder {...props}  onOrderAdd={this.createOrder}/>}/>
-                    <Route path={"/decorations"} exact render={() => <Decorations/>}/>
+                    <Route path={"/details"} exact render={() => <AllDecorations onDecorClick={this.loadDecorations()} decorations={this.state.decorations} />}/>
+                    <Route path='/details/update/:name' render={(props) => <UpdateDecoration {...props} onDecorUpdate={this.updateDecoration}/>}/>
                         <Informations/>
                         <Redirect to={"/"}/>
                     </section>

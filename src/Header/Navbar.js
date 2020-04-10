@@ -17,10 +17,6 @@ class Navbar extends Component{
                                 &nbsp; <b>HOME</b>
                             </Link>
                             </li>
-                            <li className="breadcrumb-item"> <Link to="/orders" className="white-text fa fa-shopping-basket">
-                                &nbsp; <b>MY BASKET</b>
-                            </Link>
-                            </li>
                             <li className="breadcrumb-item"> <Link to="/about" className="white-text fa fa-address-book">
                                 &nbsp; <b>ABOUT US</b>
                             </Link>

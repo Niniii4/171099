@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface JpaGiftsRepository extends JpaRepository<Gifts, Integer> {
     @Query("SELECT g FROM Gifts g WHERE g.id=:id")
-    List<Gifts> findAllById(@Param("id") Long id);
+    Gifts findGiftsById(@Param("id") Long id);
 
     @Query("SELECT g FROM Gifts g WHERE g.title=:title")
     List<Gifts> findAllByTitle(@Param("title") String title);

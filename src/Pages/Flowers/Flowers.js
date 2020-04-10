@@ -7,17 +7,17 @@ class Flowers extends Component {
         return (
             <div>
                 <div className="container">
-                    <div className="card border-info mx-auto mb-3">
-                        <div className="card-header bg-transparent border-info text-info"><h3
-                            className="card-title text-info">Gift no.{this.props.id}: {this.props.title}</h3></div>
-                        <div className="card-body text-info">
+                    <div className="card mx-auto mb-3">
+                        <div className="card-header card-h "><h3
+                            className="card-title text-white"> {this.props.title}</h3></div>
+                        <div className="card-body">
                             <p className="card-text"><u>Description:</u> {this.props.description}</p>
                             <p className="card-text"><u>Color:</u> {this.props.color} color</p>
                             <p className="card-text"><u>Family of:</u> {this.props.family}</p>
                             <p className="card-text"><u>Type:</u> {this.props.type} flower</p>
                             <p className="card-text"><u>Size:</u> {this.props.size} size</p>
                         </div>
-                        <div className="card-footer card-footer-center bg-transparent border-info">
+                        <div className="card-footer card-h card-footer-center">
                             <Link to={{
                                 pathname: '/flowers/update/' + this.props.id,
                                 update: {

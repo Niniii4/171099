@@ -16,9 +16,10 @@ public class GiftsServiceImpl implements GiftsService {
     public GiftsServiceImpl(JpaGiftsRepository jpaGiftsRepository) {
         this.jpaGiftsRepository = jpaGiftsRepository;
     }
+
     @Override
-    public List<Gifts> getAllGifts(Long id) {
-        return this.jpaGiftsRepository.findAllById(id);
+    public Gifts findGiftsById(Long id) {
+        return this.jpaGiftsRepository.findGiftsById(id);
     }
 
     @Override

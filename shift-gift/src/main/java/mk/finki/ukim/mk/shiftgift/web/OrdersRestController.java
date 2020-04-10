@@ -50,10 +50,10 @@ public class OrdersRestController {
                               @RequestParam (value = "address", required = false) String address,
                               @RequestParam (value = "phone", required = false) Long phone,
                               @RequestParam (value = "numOrders", required = false) Long numOrders,
-                              @RequestParam (value = "orderGifts", required = false) Gifts orderGifts,
+                              @RequestParam (value = "orderGifts", required = false) Long orderGiftsId,
                               HttpServletResponse response,
                               UriComponentsBuilder builder){
-        Orders order = ordersService.createOrder(name, surname, email, address, phone, numOrders, orderGifts);
+        Orders order = ordersService.createOrder(name, surname, email, address, phone, numOrders, orderGiftsId);
         response.setHeader("Orders", builder.path("/orders/create/{id}").buildAndExpand(order.getId()).toUriString());
         return order;
     }

@@ -19,6 +19,9 @@ public class DetailsRestController {
         this.detailsService = detailsService;
     }
 
+    @GetMapping
+    public List<Details> findAllDetails(){return this.detailsService.findAllDetails();}
+
     @GetMapping("/{name}")
     public List<Details> findByName(@PathVariable String name){
         return this.detailsService.findByName(name);
@@ -29,7 +32,7 @@ public class DetailsRestController {
         return this.detailsService.findAllByName(name);
     }
 
-    @PatchMapping("/{name}")
+    @PatchMapping("/update/{name}")
     public void updateDetail(
                              @PathVariable(value = "name", required = false) String name,
                              @RequestParam(value = "size", required = false) String size,

@@ -16,6 +16,9 @@ public class DetailsServiceImpl implements DetailsService {
     }
 
     @Override
+    public List<Details> findAllDetails(){ return this.jpaDetailsRepository.findAll();}
+
+    @Override
     public List<Details> findByName(String name) {
         return this.jpaDetailsRepository.findByName(name);
     }
