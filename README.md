@@ -1,68 +1,21 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Проект по ВЕБ ПРОГРАМИРАЊЕ, зимски семестар 2019/2020
 
-## Available Scripts
+Проектот Shift a Gift е креиран со 2 главни технологии за Веб Програмирање: Spring Boot & ReactJs. Користена е напредна база на податоци со отворен код: PostgreSQL. 
+Главна цел на креираната „апликација“ (проект) се гледа и во самото име - испраќање поклон. 
+
+## Претставување на проектот со приказна
+
+„Одредена компанија (цвеќара, Gift Shop) нуди несекојдневни услуги за своите клиенти: клиентот онлајн (преку интернет) да си го порача соодветниот поклон кој му е потребен за одредена пригода. Бидејќи е новоотворена компанијата на 2 места во светот, со инвоативни начини на работа, решаваат да и дадат и несекојдневно име на својата цвеќара - Shift a Gift. На онлајн страната можат клиентите да си креираат поклон по нивен избор, со име, бои, детали и величини. Доколку клиентот е неодлучен, или му се допаднал некој од веќе достапните поклони кои ги нуди компанијата, може да одбере од нив и да ги порача. Ако сака да промени одредени детали поврзани со веќе готовиот поклон, достапна е и таа опција. Потоа, потребно е само да внесе неколку информации за соодветно и навремено доставување на неговиот поклон. Ако клиентот не сака друг да има ист поклон како неговиот, може истиот да го отстрани од понудените поклони.“
+
+## Spring Boot
+
+Креирани се 5 класни ентитети кои имаат различна поврзаност меѓусебно. Најглавна од нив е класата "Gifts"(Поклони) од која наследуваат други 3 класи: "Flowers"(Цвеќиња), "Wrappings"(Обвивки), "Ornaments"(Украси). Останатите се "Details"(Детали) и "Orders"(Нарачки). 
+Секое цвеќе може да има повеќе детали, и повеќе детали можат да бидат на различни цвеќиња. Истото важи и за обвивките. Еден од поклоните (цвеќиња, обвивки и украси) може да биде нарачан повеќе пати. Шемата на базата на податоци е дополнително прикачена. За управување со секоја од класините ентитети има креирано соодветни JpaRepositories. Бизнис логиката е во сите сервиси, а за нив има креирано соодветни интерфејси кои ги содржат методите што сервисот ги имплементира. На крај, RestControllers, кои се комбинација на анотации од контролери и тела на одговори, се користат за директно претворање на соодветните HTTP одговори. 
+
+## ReactJs
+
+
 
 In the project directory, you can run:
 
 ### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
